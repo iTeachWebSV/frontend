@@ -1,0 +1,64 @@
+$maroon: #B42D5D;
+$prussian-blue: #003049;
+$pale-pink: #F1DEDE;
+$pale-silver: #C2CFB2;
+$bronze-metallic: #A98A53;
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$open-sans: 'Work Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+$judson: 'Judson', serif;
+
+@mixin navBarStyle($color: $prussian-blue, $secondary-color: $pale-pink, $title: $judson, $background: white ) {
+    font-family: $title;
+    color: $color;
+    background-color: $background;
+  }
+@mixin squareImg($width: 800px, $height: 500px){
+    max-width: $width;
+    max-height: $height;
+    
+}
+ 
+.v-image__image{
+    @include squareImg();
+}
+
+ .v-toolbar__content{
+    @include navBarStyle();
+ }
+
+.v-input__control {
+    &.v-input__slot{
+        background-color: red;
+    }
+}
+
+.v-btn--active.noactive::before{
+    opacity: 0 !important;
+}
+
+.v-application{
+    font-family: $judson;
+        font-weight: 400;
+        color: $prussian-blue !important;
+    .v-card__title {
+        font-family: $judson;
+        font-weight: 700; 
+        
+    }
+    h1{
+        &.text-h4{
+        font-family: $judson;
+        font-weight: 700; 
+        }
+    }
+    .text-h4{
+        font-family: $judson;
+        font-weight: 400;
+        color: $prussian-blue;
+    }
+}
+
+
